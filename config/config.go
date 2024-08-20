@@ -25,7 +25,12 @@ func (c SSHConfig) Addr() string {
 }
 
 func New() Config {
-	if err := godotenv.Load("../.env"); err != nil {
+	home, err := os.UserHomeDir()
+	if err != nil {
+		log.Fatal(err)
+	}
+	configFileDir := home + "/.config/package-manager/.env"
+	if err := godotenv.Load(configFileDir); err != nil {
 		log.Fatalf("Error loading .env file: %s", err.Error())
 	}
 

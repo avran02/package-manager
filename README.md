@@ -1,5 +1,21 @@
 # Simple ssh package manager
 
+### Установка
+``` bash
+git clone https://github.com/avran02/package-manager
+cd package-manager
+go install
+
+# Создаём .env конфиг в домашней директории пользователя
+package-manager init
+
+# Поднимаем тестовый ssh сервер в контейнере 
+docker-compose up -d
+```
+Конфиг уже содержит данные для подключения к docker контейнеру с поднятым ssh сервером 
+
+# ТЗ
+
 Сделать на GO пакетный менеджер
 
 Должен уметь упаковывать файлы в архив, и заливать их на сервер по SSH
