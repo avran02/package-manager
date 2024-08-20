@@ -1,0 +1,11 @@
+{
+    "name": "hw",
+    "ver": "0.1",
+    "targets": [
+        {
+            "path": "./*",
+            "exclude": "*.env"
+        }
+    ],
+    "deps": []
+}
